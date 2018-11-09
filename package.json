@@ -1,0 +1,16 @@
+{
+  "name": "my-little-wallet",
+  "version": "1.0.0",
+  "description": "Friendship Is Magic!",
+  "main": "mlw.mjs",
+  "author": "Yuoa <jio@yuoa.pm>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "colors": "^1.3.2",
+    "express": "^4.16.4",
+    "moment": "^2.22.2",
+    "socket.io": "^2.1.1",
+    "web3": "^1.0.0-beta.36"
+  }
+}

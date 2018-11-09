@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0, user-scalable=0 shrink-to-fit=no">
+    <base href=".">
+    <title>My Little Wallet</title>
+    <meta name="theme-color" content="#3d1d4a">
+    <link href="mlw.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.slim.js"></script>
+    <script src="mlw.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png">
+</head>
+<body>
+    <div id="wrapper" class="select_home disable-scrolling">
+        <div id="initial_load" class="full_window preloader show">
+            <div class="preload_center">
+                <img src="./images/l_bottom.png" class="pl_inner">
+                <img src="./images/l_middle.png" class="pl_middle">
+                <img src="./images/l_top.png" class="pl_outer">
+            </div>
+            <div class="lockup">
+                <img class="title_treatment" src="./images/tt_small.png">
+            </div>
+        </div>
+        <header>
+            <nav id="main_nav" class="main_nav">
+                <div class="lockup">
+                    <img class="title_treatment" src="./images/tt.png">
+                </div>
+            </nav>
+        </header>
+        <div id="page_holder" class="page_holder">
+            <div id="page_content" class="page_content home">
+                <video id="back_video" src="assets/video.mp4" autoplay loop></video>
+                <audio id="back_audio" src="assets/music.ogg" loop></audio>
+                <div id="video_grad">&nbsp;</div>
+                <div class="big_pony_holder">
+                    <img src="./images/ponies.png" class="pony_group show">
+                </div>
+                <div class="pony_content">
+                    <div class="pony_content_back"></div>
+                    <div class="pony_content_fore">
+                        <h3>My accounts</h3>
+                        <table id="acc_table"></table>
+                        <h3>Send Ether</h3>
+                        <form id="sendform">
+                            <label for="tm">Transmitter</label>
+                            <select id="acc_select" name="tm"></select>
+                            <br>
+                            <label for="rp">Recipient</label>
+                            <input list="rpList" id="rp" type="text" name="rp" placeholder="0x0000..." required>
+                            <br>
+                            <label for="val">Value (ETH)</label>
+                            <input id="val" name="val" type="number" placeholder="0.001" required>
+                            <br>
+                            <label for="pwd">Password</label>
+                            <input id="pwd" name="pwd" type="password" autocomplete="off" required>
+                            <br>
+                            <span id="status" class="upper-padding"></span>
+                            <input id="submit" class="upper-padding" type="submit" value="Send">
+                            <datalist id="rpList"></datalist>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="legal">Gas Price: <span id="gas_price"></span> gwei<br>Applying Tx takes about one minute</div>
+        </div>
+        <div id="not_supported" style="display: block;">
+            <div class="warning_text">
+                Sorry, this browser is not supported. Please update to the latest version.
+            </div>
+            <img src="images/twilight_low.png">
+        </div>
+    </div>
+</body>
+</html>
