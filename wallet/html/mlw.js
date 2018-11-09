@@ -165,13 +165,16 @@ window.onload = function() {
 
         // Bind submit button event
         document.getElementById("submit").onclick = function () {
-            document.activeElement.blur();
             updateStatus("Sending...", false, false);
             var data = {};
             data.rp = document.getElementById("rp").value;
+            document.getElementById("rp").value = "";
             data.val = document.getElementById("val").value;
+            document.getElementById("val").value = "";
             data.tm = document.getElementById("acc_select").selectedOptions[0].id.substring(3);
             data.pwd = document.getElementById("pwd").value;
+            document.getElementById("pwd").value = "";
+            document.activeElement.blur();
             soc.emit('send', data);
             return false;
         }
