@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Friendship Is Magic!",
   "main": "mlw.mjs",
-  "author": "Yuoa <jio@yuoa.pm>",
+  "author": "wldh <jio@wldh.org>",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
